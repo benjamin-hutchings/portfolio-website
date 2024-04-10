@@ -81,7 +81,7 @@ const Experience = () => {
   });
 
   return (
-    <section id="experience" className="text-gray-600 body-font min-h-screen">
+    <section id="experience" className="text-gray-600 body-font min-h-screen bg-slate-50">
       <div className="container px-5 py-24 mx-auto ">
         <div className="flex flex-col">
           <div className="h-1 bg-gray-200 rounded overflow-hidden">

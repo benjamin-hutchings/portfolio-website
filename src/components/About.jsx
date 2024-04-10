@@ -36,7 +36,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="text-gray-600 body-font overflow-hidden min-h-screen flex items-center justify-center bg-white snap-y"
+      className="text-gray-600 body-font overflow-hidden min-h-screen flex items-center justify-center bg-slate-50 snap-y"
       ref={ref}
     >
       <motion.div
@@ -77,7 +77,7 @@ const About = () => {
             </a>
             <a
               href="#projects"
-              className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex text-gray-700 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
             >
               Explore my Projects
             </a>

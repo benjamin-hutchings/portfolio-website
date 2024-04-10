@@ -90,7 +90,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="snap-start flex items-center justify-center text-gray-600 body-font min-h-screen"
+      className="snap-start flex items-center justify-center text-gray-600 body-font min-h-screen "
     >
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
