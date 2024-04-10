@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ReactTyped } from 'react-typed';
 
 const About = () => {
   const controls = useAnimation();
@@ -22,6 +23,16 @@ const About = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
+  // Define the job roles you want to cycle through
+  const jobRoles = [
+    "Machine Learning Engineer",
+    "Deep Learning Researcher",
+    "AI Enthusiast",
+    "Skier",
+    "Surfer",
+    "Crossfitter",
+  ];
+
   return (
     <section
       id="about"
@@ -34,8 +45,6 @@ const About = () => {
         animate={controls}
         variants={variants}
       >
-        {/* Profile Image or Illustration */}
-        {/* Ensure you add an alt attribute for accessibility */}
         <motion.img
           src={`${process.env.PUBLIC_URL}/img/profile-pic.png`}
           alt="Profile Picture"
@@ -44,22 +53,22 @@ const About = () => {
         />
         <motion.div className="md:ml-24 text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Hi, I'm Ben...
+            Hi, I'm Ben... <br/>
+            {/* Typed component for job roles animation */}
+            <ReactTyped
+              strings={jobRoles}
+              typeSpeed={40}
+              backSpeed={20}
+              loop
+            />
           </h1>
-
           <p className="mb-8 leading-relaxed">
-            Driven by curiosity, I embark on a journey to harness the
-            transformative power of <strong>Machine Learning</strong>. With a
-            knack for developing sophisticated predictive models and deep
-            learning algorithms, I aim to transform insights into innovative
-            strategies that propel industries forward and enhance lives.
+            Driven by curiosity, I embark on a journey to harness the transformative power of <strong>Machine Learning</strong>. With a knack for developing sophisticated predictive models and deep learning algorithms, I aim to transform insights into innovative strategies that propel industries forward and enhance lives.
           </p>
-          {/* Call-to-action Buttons */}
           <motion.div
             className="flex justify-center md:justify-center gap-4"
             variants={variants}
           >
-            {/* Consider adding icons to these buttons for visual appeal */}
             <a
               href="#skills"
               className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
@@ -72,7 +81,6 @@ const About = () => {
             >
               Explore my Projects
             </a>
-
           </motion.div>
         </motion.div>
       </motion.div>
