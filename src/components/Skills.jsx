@@ -26,7 +26,7 @@ const Skills = () => {
       subSkills: [
         { name: "Pandas", icon: "🐼" },
         { name: "Scikit-learn", icon: "🛠️" },
-        { name: "Streamlit", icon: "💡" },
+        { name: "Streamlit", icon: "🚀" },
         { name: "NumPy", icon: "🔢" },
         { name: "Matplotlib", icon: "📊" },
         { name: "Seaborn", icon: "🎨" },
@@ -42,7 +42,7 @@ const Skills = () => {
       subSkills: [
         { name: "Keras", icon: "🔧" },
         { name: "PyTorch", icon: "🔥" },
-        { name: "Tensorflow", icon: "⚙️" },
+        { name: "Tensorflow", icon: "💡" },
         { name: "Computer Vision", icon: "👁️" },
         { name: "NLP", icon: "💬" },
         { name: "Reinforcement Learning", icon: "🕹️" },
@@ -73,7 +73,7 @@ const Skills = () => {
       icon: "🔍",
       subSkills: [
         { name: "MATLAB", icon: "📊" },
-        { name: "Simulink", icon: "🔗" },
+        { name: "Simulink", icon: "⚙️" },
         { name: "Validation", icon: "✅" },
         { name: "Peer Review", icon: "👀" },
         { name: "Stakeholder Engagement", icon: "🤝" },
