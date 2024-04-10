@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: false, // Set to true if you want the animation to only occur once
-    threshold: 0.5, // Adjust based on when you want the animation to start
+    triggerOnce: false,
+    threshold: 0.5,
   });
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     } else {
-      controls.start('hidden');
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -23,24 +23,75 @@ const Projects = () => {
   };
 
   const fadeInVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.5, delay: 0.5 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.5, delay: 0.5 },
+    },
     hidden: { opacity: 0, scale: 0.95 },
   };
 
+  const hoverEffect = {
+    scale: 1.05,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  };
+
   const additionalProjects = [
-    { title: "Project 4", category: "Category", description: "Project description..." },
-    { title: "Project 5", category: "Category", description: "Project description..." },
-    { title: "Project 6", category: "Category", description: "Project description..." },
-    { title: "Project 7", category: "Category", description: "Project description..." },
-    { title: "Project 8", category: "Category", description: "Project description..." },
-    { title: "Project 9", category: "Category", description: "Project description..." },
-    { title: "Project 10", category: "Category", description: "Project description..." },
-    { title: "Project 11", category: "Category", description: "Project description..." },
-    { title: "Project 12", category: "Category", description: "Project description..." },
+    {
+      title: "Project 4",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 5",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 6",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 7",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 8",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 9",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 10",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 11",
+      category: "Category",
+      description: "Project description...",
+    },
+    {
+      title: "Project 12",
+      category: "Category",
+      description: "Project description...",
+    },
   ];
 
   return (
-    <section id="projects" className="snap-start flex items-center justify-center text-gray-600 body-font min-h-screen">
+    <section
+      id="projects"
+      className="snap-start flex items-center justify-center text-gray-600 body-font min-h-screen"
+    >
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
@@ -50,18 +101,22 @@ const Projects = () => {
             Some projects I've worked on.
           </p>
         </div>
-        
+
         {/* Main featured projects */}
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={slideUpVariant}
-          className="flex flex-wrap -m-4"
+          className="flex flex-wrap -m-4 justify-center" // Added 'justify-center' to center the items
         >
           {/* You can duplicate this block for each featured project you have */}
           <div className="p-4 lg:w-1/3">
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <motion.div
+              whileHover={hoverEffect}
+              div
+              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
+            >
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                 CATEGORY
               </h2>
@@ -71,10 +126,13 @@ const Projects = () => {
               <p className="leading-relaxed mb-3">
                 A brief description of the project...
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className="p-4 lg:w-1/3">
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <motion.div
+              whileHover={hoverEffect}
+              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
+            >
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                 CATEGORY
               </h2>
@@ -84,10 +142,13 @@ const Projects = () => {
               <p className="leading-relaxed mb-3">
                 A brief description of the project...
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className="p-4 lg:w-1/3">
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <motion.div
+              whileHover={hoverEffect}
+              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
+            >
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                 CATEGORY
               </h2>
@@ -97,7 +158,7 @@ const Projects = () => {
               <p className="leading-relaxed mb-3">
                 A brief description of the project...
               </p>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -110,6 +171,7 @@ const Projects = () => {
               initial="hidden"
               animate={controls}
               variants={fadeInVariant}
+              whileHover={hoverEffect}
             >
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                 {project.category}
