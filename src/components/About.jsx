@@ -40,11 +40,11 @@ const About = () => {
       ref={ref}
     >
       <motion.div
-        className="container mx-auto flex px-5 py-10 md:flex-row items-center justify-between"
-        initial="hidden"
-        animate={controls}
-        variants={variants}
-      >
+  className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center justify-between"
+  initial="hidden"
+  animate={controls}
+  variants={variants}
+>
         <motion.img
           src={`${process.env.PUBLIC_URL}/img/profile-pic.png`}
           alt="Profile Picture"

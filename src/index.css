@@ -31,3 +31,7 @@ html {
     transform: translateY(-10px);
   }
 }
+
+body, html {
+  overflow-x: hidden;
+}
