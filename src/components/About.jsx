@@ -51,10 +51,16 @@ const About = () => {
           variants={variants}
         >
           <a href="#skills" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-            Skills
+            View my Skills
           </a>
-          <a href="#projects" className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-            Explore My Projects
+          <a href="#experience" className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+            What's my experience?
+          </a>
+          <a href="#projects" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+            Explore my Projects
+          </a>
+          <a href="#contact" className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+            Contact Me!
           </a>
         </motion.div>
       </motion.div>

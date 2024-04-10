@@ -20,39 +20,72 @@ const Skills = () => {
   const skills = [
     {
       name: "Machine Learning",
-      description: "Building predictive models and leveraging statistical algorithms to uncover insights.",
+      description:
+        "Building predictive models and leveraging statistical algorithms to uncover insights.",
       icon: "📈",
-      subSkills: ["Pandas", "Scikit-learn", "Streamlit"],
+      subSkills: [
+        { name: "Pandas", icon: "🐼" },
+        { name: "Scikit-learn", icon: "🛠️" },
+        { name: "Streamlit", icon: "💡" },
+        { name: "NumPy", icon: "🔢" },
+        { name: "Matplotlib", icon: "📊" },
+        { name: "Seaborn", icon: "🎨" },
+      ],
       color: "bg-blue-500",
       subSkillColor: "bg-blue-200",
     },
     {
       name: "Deep Learning",
-      description: "Designing and implementing neural network architectures for complex problem solving.",
+      description:
+        "Designing and implementing neural network architectures for complex problem solving.",
       icon: "🧠",
-      subSkills: ["Keras", "PyTorch", "Tensorflow"],
+      subSkills: [
+        { name: "Keras", icon: "🔧" },
+        { name: "PyTorch", icon: "🔥" },
+        { name: "Tensorflow", icon: "⚙️" },
+        { name: "Computer Vision", icon: "👁️" },
+        { name: "NLP", icon: "💬" },
+        { name: "Reinforcement Learning", icon: "🕹️" },
+      ],
       color: "bg-red-500",
       subSkillColor: "bg-red-200",
     },
     {
       name: "Software Development",
-      description: "Crafting scalable and efficient software solutions with a focus on modern development frameworks.",
+      description:
+        "Crafting scalable and efficient software solutions with a focus on modern development frameworks.",
       icon: "💻",
-      subSkills: ["Python", "JavaScript", "React", "Node.js", "TailwindCSS"],
+      subSkills: [
+        { name: "Python", icon: "🐍" },
+        { name: "JavaScript", icon: "📜" },
+        { name: "React", icon: "⚛️" },
+        { name: "Three.js", icon: "🌿" },
+        { name: "TailwindCSS", icon: "🌬️" },
+        { name: "Git", icon: "🌐" },
+      ],
       color: "bg-green-500",
       subSkillColor: "bg-green-200",
     },
     {
       name: "Engineering Research",
-      description: "Applying rigorous methodologies to innovate in AI and engineering.",
+      description:
+        "Applying rigorous methodologies to innovate in AI and engineering.",
       icon: "🔍",
-      subSkills: ["MATLAB", "Simulink"],
+      subSkills: [
+        { name: "MATLAB", icon: "📊" },
+        { name: "Simulink", icon: "🔗" },
+        { name: "Validation", icon: "✅" },
+        { name: "Peer Review", icon: "👀" },
+        { name: "Stakeholder Engagement", icon: "🤝" },
+        { name: "Lab-based Experimentation", icon: "🔬" },
+        { name: "Agile", icon: "🏃‍♂️" },
+      ],
       color: "bg-purple-500",
       subSkillColor: "bg-purple-200",
     },
   ];
 
-   const subSkillVariants = {
+  const subSkillVariants = {
     hidden: { scale: 0 },
     visible: {
       scale: 1,
@@ -61,6 +94,22 @@ const Skills = () => {
         when: "beforeChildren",
         staggerChildren: 0.1,
       },
+    },
+  };
+
+  const baseEffect = {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  };
+
+  const hoverEffect = {
+    scale: 1.05,
+    transition: {
+      type: "spring",
+      stiffness: 300,
     },
   };
 
@@ -87,26 +136,45 @@ const Skills = () => {
         }}
       >
         <div className="text-center mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Skills & Expertise</h1>
+          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            Skills & Expertise
+          </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Leveraging a blend of technical skills and creativity to solve complex challenges and innovate.
+            Leveraging a blend of technical skills and creativity to solve
+            complex challenges and innovate.
           </p>
         </div>
         <motion.div className="flex flex-wrap justify-center">
           {skills.map((skill, index) => (
-            <motion.div className="p-4 md:w-1/2 lg:w-1/4" key={index} variants={subSkillVariants}>
+            <motion.div
+              className="p-4 md:w-1/2 lg:w-1/4"
+              key={index}
+              variants={subSkillVariants}
+              initial={baseEffect}
+              animate={baseEffect}
+              whileHover={hoverEffect}
+            >
               <div className="flex flex-col rounded-lg h-full bg-gray-100 p-8 shadow">
                 <div className="flex items-center mb-3">
-                  <div className={`w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full ${skill.color} text-white`}>
+                  <div
+                    className={`w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full ${skill.color} text-white`}
+                  >
                     {skill.icon}
                   </div>
-                  <h2 className="text-lg title-font font-medium">{skill.name}</h2>
+                  <h2 className="text-lg title-font font-medium">
+                    {skill.name}
+                  </h2>
                 </div>
                 <p className="leading-relaxed mb-4">{skill.description}</p>
                 <div className="flex flex-wrap">
                   {skill.subSkills.map((subSkill, subIndex) => (
-                    <motion.span key={subIndex} className={`text-sm ${skill.subSkillColor} m-1 p-2 rounded-lg`} variants={subSkillVariants}>
-                      {subSkill}
+                    <motion.span
+                      key={subIndex}
+                      className={`text-sm ${skill.subSkillColor} m-1 p-2 rounded-lg flex items-center`}
+                      variants={subSkillVariants}
+                    >
+                      <span className="mr-1">{subSkill.icon}</span>{" "}
+                      {subSkill.name}
                     </motion.span>
                   ))}
                 </div>

@@ -6,7 +6,7 @@ const Projects = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
   useEffect(() => {
