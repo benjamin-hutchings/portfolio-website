@@ -203,7 +203,7 @@ const Projects = () => {
             initial="hidden"
             animate="visible"
           >
-            Contact Me!
+            Contact Me
           </motion.a>
         </div>
       </div>

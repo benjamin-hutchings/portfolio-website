@@ -160,7 +160,7 @@ const Experience = () => {
             initial="hidden"
             animate="visible"
           >
-            Explore projects!
+            Explore projects
           </motion.a>
           <motion.a
             href="/cv/example_cv.pdf"
