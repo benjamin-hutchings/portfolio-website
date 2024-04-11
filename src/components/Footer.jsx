@@ -8,7 +8,7 @@ const Footer = () => {
           <span className="ml-3 text-xl">Benjamin Hutchings</span>
         </div>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © {new Date().getFullYear()} Your Brand —
+          © {new Date().getFullYear()}
           <a
             href="www.google.com"
             className="text-gray-600 ml-1"

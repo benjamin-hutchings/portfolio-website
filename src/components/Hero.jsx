@@ -1,66 +1,74 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = ({ onLearnMoreClick }) => {
+  // Animation variants for the container and items
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+    hidden: { y: 30, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
   };
+
+  // Button component for reuse
+  const ButtonLink = ({
+    className,
+    href,
+    download,
+    onClick,
+    children,
+    label,
+  }) => (
+    <motion.a
+      className={className}
+      href={href}
+      download={download}
+      onClick={onClick}
+      aria-label={label}
+      initial="hidden"
+      animate="visible"
+      variants={itemVariants}
+    >
+      {children}
+    </motion.a>
+  );
 
   return (
     <section className="snap-start h-screen flex flex-col items-center justify-center bg-gray-800 text-white">
-      <div className="text-center">
-        <motion.header
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          transition={{ staggerChildren: 0.2 }}
-        >
-          <motion.h1
-            className="text-5xl font-bold"
-            variants={itemVariants}
-            transition={{ duration: 0.8 }}
-          >
-            Benjamin Hutchings
-          </motion.h1>
-          <motion.p
-            className="text-xl mt-4"
-            variants={itemVariants}
-            transition={{ duration: 0.8 }}
-          >
-            Machine Learning Engineer
-          </motion.p>
-        </motion.header>
-        <motion.div
-          className="mt-8"
-          initial="hidden"
-          animate="visible"
-          variants={itemVariants}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <a
+      <motion.div
+        className="text-center"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.h1 className="text-5xl font-bold" variants={itemVariants}>
+          Benjamin Hutchings
+        </motion.h1>
+        <motion.p className="text-xl mt-4" variants={itemVariants}>
+          Machine Learning Engineer
+        </motion.p>
+        <div className="mt-8 flex justify-center space-x-4">
+          <ButtonLink
+            className="inline-flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded py-2 px-6 text-lg"
             href="#about"
-            className="inline-flex items-center justify-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
             onClick={onLearnMoreClick}
-            aria-label="Explore Portfolio"
+            label="Explore Portfolio"
           >
             Explore Portfolio
-          </a>
-          <a
+          </ButtonLink>
+          <ButtonLink
+            className="inline-flex items-center justify-center text-gray-700 bg-gray-100 hover:bg-gray-200 rounded py-2 px-6 text-lg"
             href="/cv/example_cv.pdf"
             download="Benjamin_Hutchings_CV.pdf"
-            className="ml-4 inline-flex items-center justify-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
-            aria-label="Download CV"
+            label="Download CV"
           >
             Download CV
-          </a>
-        </motion.div>
-      </div>
+          </ButtonLink>
+        </div>
+      </motion.div>
     </section>
   );
 };

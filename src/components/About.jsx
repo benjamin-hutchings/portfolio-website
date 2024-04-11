@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ReactTyped } from 'react-typed';
+import { ReactTyped } from "react-typed";
 
 const About = () => {
   const controls = useAnimation();
@@ -40,11 +40,11 @@ const About = () => {
       ref={ref}
     >
       <motion.div
-  className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center justify-between"
-  initial="hidden"
-  animate={controls}
-  variants={variants}
->
+        className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center justify-between"
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+      >
         <motion.img
           src={`${process.env.PUBLIC_URL}/img/profile-pic.png`}
           alt="Profile Picture"
@@ -53,17 +53,16 @@ const About = () => {
         />
         <motion.div className="md:ml-24 text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Hi, I'm Ben... <br/>
+            Hi, I'm Ben... <br />
             {/* Typed component for job roles animation */}
-            <ReactTyped
-              strings={jobRoles}
-              typeSpeed={40}
-              backSpeed={20}
-              loop
-            />
+            <ReactTyped strings={jobRoles} typeSpeed={40} backSpeed={20} loop />
           </h1>
           <p className="mb-8 leading-relaxed">
-            Driven by curiosity, I embark on a journey to harness the transformative power of <strong>Machine Learning</strong>. With a knack for developing sophisticated predictive models and deep learning algorithms, I aim to transform insights into innovative strategies that propel industries forward and enhance lives.
+            Driven by curiosity, I embark on a journey to harness the
+            transformative power of <strong>Machine Learning</strong>. With a
+            knack for developing sophisticated predictive models and deep
+            learning algorithms, I aim to transform insights into innovative
+            strategies that propel industries forward and enhance lives.
           </p>
           <motion.div
             className="flex justify-center md:justify-center gap-4"

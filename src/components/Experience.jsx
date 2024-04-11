@@ -139,7 +139,7 @@ const Experience = () => {
                 >
                   <div className="flex items-center">
                     {renderIcon(experience.icon)} {/* Render the icon */}
-                    <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest ml-2"> 
+                    <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest ml-2">
                       {experience.duration}
                     </span>
                   </div>
