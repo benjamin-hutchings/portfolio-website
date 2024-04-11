@@ -113,10 +113,22 @@ const Skills = () => {
     },
   };
 
+  const buttonVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section
       id="skills"
-      className="snap-start min-h-screen flex items-center justify-center bg-white text-gray-600 body-font"
+      className="snap-start min-h-screen flex flex-col items-center justify-center bg-white text-gray-600 body-font"
       ref={ref}
     >
       <motion.div
@@ -173,7 +185,7 @@ const Skills = () => {
                       className={`text-sm ${skill.subSkillColor} m-1 p-2 rounded-lg flex items-center`}
                       variants={subSkillVariants}
                     >
-                      <span className="mr-1">{subSkill.icon}</span>{" "}
+                      <span className="mr-1">{subSkill.icon}</span>
                       {subSkill.name}
                     </motion.span>
                   ))}
@@ -182,6 +194,17 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+        <div className="flex justify-center mt-8">
+          <motion.a
+            href="#experience"
+            className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            View my Experience
+          </motion.a>
+        </div>
       </motion.div>
     </section>
   );

@@ -39,6 +39,18 @@ const Projects = () => {
     },
   };
 
+  const buttonVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const additionalProjects = [
     {
       title: "Project 4",
@@ -90,7 +102,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="snap-start flex items-center justify-center text-gray-600 body-font min-h-screen "
+      className="snap-start flex flex-col items-center justify-center text-gray-600 body-font min-h-screen "
     >
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
@@ -182,6 +194,17 @@ const Projects = () => {
               <p className="leading-relaxed">{project.description}</p>
             </motion.div>
           ))}
+        </div>
+        <div className="w-full flex justify-center mt-10 mb-20">
+          <motion.a
+            href="#contact"
+            className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            Contact Me!
+          </motion.a>
         </div>
       </div>
     </section>
