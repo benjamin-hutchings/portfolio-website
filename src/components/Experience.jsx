@@ -40,7 +40,7 @@ const experiences = [
     company: "Welbeck Defence Sixth Form College (DSFC)",
     duration: "Sept 2017 - Aug 2019",
     description:
-      "A-Levels Completed: A*A*A (Mathematics, Physics & Further Mathematics), A (AS - Chemistry) & EPQ. 1st XV Rugby Union, 1st VIII Rowing, 1st XI Cricket. Attendance was sponsored by the Ministry of Defence's (MOD) Defence Technical Officer and Engineer Entry Scheme (DTOEES).",
+      "A-Levels: A*A*A (Mathematics, Physics & Further Mathematics), A (AS - Chemistry) & EPQ. 1st XV Rugby Union, 1st VIII Rowing, 1st XI Cricket. Attendance was sponsored by the Ministry of Defence's (MOD) Defence Technical Officer and Engineer Entry Scheme (DTOEES).",
     side: "left",
     icon: "FaSchool",
   },
