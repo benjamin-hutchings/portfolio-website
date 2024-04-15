@@ -189,9 +189,9 @@ const Experience = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="travel-info absolute right-0 bg-white shadow-lg p-3 mt-2 rounded z-50"
+              className="travel-info absolute bg-white shadow-lg p-3 mt-2 rounded z-50 max-w-96"
             >
-              <p className="text-gray-800 text-sm">
+              <p className="text-gray-800 text-sm ">
                 After graduating, I embraced the opportunity to broaden my
                 horizons through a year of global travel and diverse work
                 experiences. I volunteered on a sheep farm in Iceland, was front

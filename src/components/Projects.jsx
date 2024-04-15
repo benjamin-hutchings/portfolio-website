@@ -28,7 +28,7 @@ const Projects = () => {
       scale: 1,
       transition: { duration: 1.5, delay: 0.5 },
     },
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, scale: 1 },
   };
 
   const hoverEffect = {
@@ -51,6 +51,23 @@ const Projects = () => {
     },
   };
 
+  const featuredProjects = [
+    {
+      category: "CATEGORY",
+      title: "Project 1",
+      description: "A brief description of the project...",
+    },
+    {
+      category: "CATEGORY",
+      title: "Project 2",
+      description: "A brief description of the project...",
+    },
+    {
+      category: "CATEGORY",
+      title: "Project 3",
+      description: "A brief description of the project...",
+    },
+  ];
   const additionalProjects = [
     {
       title: "Project 4",
@@ -110,7 +127,7 @@ const Projects = () => {
             Projects
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Some projects I've worked on.
+            Here are some side-projects I've worked on as part of my personal portfolio...
           </p>
         </div>
 
@@ -122,60 +139,26 @@ const Projects = () => {
           variants={slideUpVariant}
           className="flex flex-wrap -m-4 justify-center" // Added 'justify-center' to center the items
         >
-          {/* You can duplicate this block for each featured project you have */}
-          <div className="p-4 lg:w-1/3">
-            <motion.div
-              whileHover={hoverEffect}
-              div
-              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
-            >
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
-                CATEGORY
-              </h2>
-              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                Project 1
-              </h1>
-              <p className="leading-relaxed mb-3">
-                A brief description of the project...
-              </p>
-            </motion.div>
-          </div>
-          <div className="p-4 lg:w-1/3">
-            <motion.div
-              whileHover={hoverEffect}
-              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
-            >
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
-                CATEGORY
-              </h2>
-              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                Project 2
-              </h1>
-              <p className="leading-relaxed mb-3">
-                A brief description of the project...
-              </p>
-            </motion.div>
-          </div>
-          <div className="p-4 lg:w-1/3">
-            <motion.div
-              whileHover={hoverEffect}
-              className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
-            >
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
-                CATEGORY
-              </h2>
-              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                Project 3
-              </h1>
-              <p className="leading-relaxed mb-3">
-                A brief description of the project...
-              </p>
-            </motion.div>
-          </div>
+          {featuredProjects.map((project, index) => (
+            <div key={index} className="p-4 lg:w-1/3">
+              <motion.div
+                whileHover={hoverEffect}
+                className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
+              >
+                <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
+                  {project.category}
+                </h2>
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                  {project.title}
+                </h1>
+                <p className="leading-relaxed mb-3">{project.description}</p>
+              </motion.div>
+            </div>
+          ))}
         </motion.div>
 
         {/* Scrollable section for additional projects */}
-        <div className="flex overflow-x-scroll py-10">
+        <div className="flex overflow-x-scroll py-10 gap-4">
           {additionalProjects.map((project, index) => (
             <motion.div
               key={index}
