@@ -113,10 +113,10 @@ const Experience = () => {
             <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
               Experience
             </h1>
-            <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-              Chronological timeline of my professional journey and significant
-              achievements.
-            </p>
+              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 text-right">
+                Chronological timeline of my professional journey and
+                significant achievements.
+              </p>
           </div>
           <motion.div
             ref={ref} // Attach the ref to the motion.div
@@ -202,7 +202,7 @@ const Experience = () => {
                 varied and challenging environments, skills I am eager to
                 leverage in my professional career.
               </p>
-              </div>
+            </div>
           )}
         </div>
       </div>
