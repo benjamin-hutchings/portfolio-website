@@ -58,11 +58,13 @@ const About = () => {
             <ReactTyped strings={jobRoles} typeSpeed={40} backSpeed={20} loop />
           </h1>
           <p className="mb-8 leading-relaxed">
-            Driven by curiosity, I embark on a journey to harness the
-            transformative power of <strong>Machine Learning</strong>. With a
-            knack for developing sophisticated predictive models and deep
-            learning algorithms, I aim to transform insights into innovative
-            strategies that propel industries forward and enhance lives.
+            Driven by a passion for innovation, with a solid engineering
+            background, I leverage the power of{" "}
+            <strong>Machine Learning</strong> to develop advanced AI models,
+            specializing in deep learning algorithms. My mission is to conduct
+            groundbreaking AI research and translate these findings into
+            practical, industry-leading solutions that transform technology and
+            enhance lives.
           </p>
           <motion.div
             className="flex justify-center md:justify-center gap-4"
