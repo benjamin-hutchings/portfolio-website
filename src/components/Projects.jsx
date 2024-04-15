@@ -53,19 +53,31 @@ const Projects = () => {
 
   const featuredProjects = [
     {
-      category: "CATEGORY",
+      category: "Web Development",
       title: "Project 1",
       description: "A brief description of the project...",
+      imageUrl: "/img/github-logo.png",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["React", "API"],
     },
     {
-      category: "CATEGORY",
+      category: "Machine Learning",
       title: "Project 2",
-      description: "A brief description of the project...",
+      description: "A detailed project on predictive analysis...",
+      imageUrl: "/img/github-logo.png",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "TensorFlow"],
     },
     {
-      category: "CATEGORY",
+      category: "Mobile App",
       title: "Project 3",
-      description: "A brief description of the project...",
+      description: "An innovative mobile application...",
+      imageUrl: "/img/github-logo.png",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Flutter", "Firebase"],
     },
   ];
   const additionalProjects = [
@@ -73,53 +85,79 @@ const Projects = () => {
       title: "Project 4",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["CSS", "HTML"],
     },
     {
       title: "Project 5",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 6",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 7",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 8",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 9",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 10",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 11",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"],
     },
     {
       title: "Project 12",
       category: "Category",
       description: "Project description...",
+      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
+      hashtags: ["Python", "Data"]
     },
   ];
-
   return (
     <section
       id="projects"
-      className="snap-start flex flex-col items-center justify-center text-gray-600 body-font min-h-screen "
+      className="snap-start flex flex-col items-center justify-center text-gray-600 body-font min-h-screen"
     >
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
@@ -130,21 +168,21 @@ const Projects = () => {
             Here are some side-projects I've worked on as part of my personal portfolio...
           </p>
         </div>
-
-        {/* Main featured projects */}
+  
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={slideUpVariant}
-          className="flex flex-wrap -m-4 justify-center" // Added 'justify-center' to center the items
+          className="flex flex-wrap -m-4 justify-center"
         >
           {featuredProjects.map((project, index) => (
             <div key={index} className="p-4 lg:w-1/3">
               <motion.div
                 whileHover={hoverEffect}
-                className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative"
+                className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center flex flex-col items-center relative"
               >
+                <img src={project.imageUrl} alt="Project Thumbnail" className="max-w-full max-h-40 object-cover object-center rounded-lg mb-4" />
                 <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                   {project.category}
                 </h2>
@@ -152,17 +190,21 @@ const Projects = () => {
                   {project.title}
                 </h1>
                 <p className="leading-relaxed mb-3">{project.description}</p>
+                <div className="flex justify-center gap-4 mb-3">
+                  <a href={project.githubUrl} className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">GitHub</a>
+                  <a href={project.liveDemoUrl} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors">Live Demo</a>
+                </div>
+                <p className="text-xs font-semibold text-indigo-500">#{project.hashtags.join(' #')}</p>
               </motion.div>
             </div>
           ))}
         </motion.div>
-
-        {/* Scrollable section for additional projects */}
+  
         <div className="flex overflow-x-scroll py-10 gap-4">
           {additionalProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="min-w-[300px] p-4 lg:mr-4 bg-gray-100 rounded-lg"
+              className="min-w-[300px] p-4 bg-gray-100 rounded-lg"
               initial="hidden"
               animate={controls}
               variants={fadeInVariant}
@@ -174,10 +216,15 @@ const Projects = () => {
               <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
                 {project.title}
               </h1>
-              <p className="leading-relaxed">{project.description}</p>
+              <div className="flex justify-center gap-4 mb-3">
+                <a href={project.githubUrl} className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">GitHub</a>
+                <a href={project.liveDemoUrl} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors">Live Demo</a>
+              </div>
+              <p className="text-xs font-semibold text-indigo-500 text-right">#{project.hashtags.join(' #')}</p>
             </motion.div>
           ))}
         </div>
+  
         <div className="w-full flex justify-center mt-10 mb-20">
           <motion.a
             href="#contact"
