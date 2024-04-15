@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import * as FontAwesomeIcons from "react-icons/fa";
@@ -70,6 +70,8 @@ const Experience = () => {
     }),
   };
 
+  const [showTravel, setShowTravel] = useState(false);
+
   const renderIcon = (iconName) => {
     const IconComponent = FontAwesomeIcons[iconName];
     if (IconComponent) {
@@ -102,7 +104,7 @@ const Experience = () => {
       id="experience"
       className="text-gray-600 body-font min-h-screen bg-slate-50"
     >
-      <div className="container px-5 py-24 mx-auto ">
+      <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col">
           <div className="h-1 bg-gray-200 rounded overflow-hidden">
             <div className="w-24 h-full bg-indigo-500"></div>
@@ -152,7 +154,7 @@ const Experience = () => {
             ))}
           </motion.div>
         </div>
-        <div className="flex justify-center mt-8">
+        <div className="flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
           <motion.a
             href="#projects"
             className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
@@ -165,7 +167,7 @@ const Experience = () => {
           <motion.a
             href="/cv/example_cv.pdf"
             download="Benjamin_Hutchings_CV.pdf"
-            className="ml-4 inline-flex items-center justify-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+            className="inline-flex items-center justify-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
             aria-label="Download CV"
             variants={buttonVariants}
             initial="hidden"
@@ -173,6 +175,35 @@ const Experience = () => {
           >
             Download CV
           </motion.a>
+          <motion.button
+            onMouseEnter={() => setShowTravel(true)}
+            onMouseLeave={() => setShowTravel(false)}
+            className="text-indigo-500 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all"
+            type="button"
+          >
+            Aug 2021 - Sept 2022
+          </motion.button>
+          {showTravel && (
+            <div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="travel-info absolute right-0 bg-white shadow-lg p-3 mt-2 rounded z-50"
+            >
+              <p className="text-gray-800 text-sm">
+                After graduating, I embraced the opportunity to broaden my
+                horizons through a year of global travel and diverse work
+                experiences. I volunteered on a sheep farm in Iceland, was front
+                of house hospitality services in the French Alps, explored the
+                Philippines through hitchhiking, and "brought the vibe" as a
+                surf camp host in Bali. These experiences enhanced my
+                adaptability, cultural awareness, and ability to thrive in
+                varied and challenging environments, skills I am eager to
+                leverage in my professional career.
+              </p>
+              </div>
+          )}
         </div>
       </div>
     </section>
