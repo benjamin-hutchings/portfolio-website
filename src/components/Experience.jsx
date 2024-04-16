@@ -154,10 +154,10 @@ const Experience = () => {
             ))}
           </motion.div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col items-center sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
           <motion.a
             href="#projects"
-            className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center justify-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg max-w-64"
             variants={buttonVariants}
             initial="hidden"
             animate="visible"
@@ -167,7 +167,7 @@ const Experience = () => {
           <motion.a
             href="/cv/example_cv.pdf"
             download="Benjamin_Hutchings_CV.pdf"
-            className="inline-flex items-center justify-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+            className="inline-flex items-center justify-center text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg max-w-64"
             aria-label="Download CV"
             variants={buttonVariants}
             initial="hidden"
@@ -178,7 +178,7 @@ const Experience = () => {
           <motion.button
             onMouseEnter={() => setShowTravel(true)}
             onMouseLeave={() => setShowTravel(false)}
-            className="text-indigo-500 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all"
+            className="text-indigo-500 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all max-w-64"
             type="button"
           >
             Aug 2021 - Sept 2022
