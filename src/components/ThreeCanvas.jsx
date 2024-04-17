@@ -12,32 +12,28 @@ const ThreeCanvas = () => {
       0.1,
       1000
     );
-    camera.position.z = 100; // Adjust camera Z position if necessary
+    camera.position.z = 110;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.enabled = true;
     mountRef.current.appendChild(renderer.domElement);
 
-    // Enhanced Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambientLight);
 
     const pointLight = new THREE.PointLight(0xffffff, 1, 1000);
     pointLight.position.set(50, 50, 50);
-    pointLight.castShadow = true;
     scene.add(pointLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-    directionalLight.position.set(0, 1, 0); // Coming from the top
-    directionalLight.castShadow = true;
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(0, 1, 0);
     scene.add(directionalLight);
 
     const geometry = new THREE.SphereGeometry(0.5, 32, 32);
     const material = new THREE.MeshPhongMaterial({
       color: 0x3498db,
       specular: 0x555555,
-      shininess: 30
+      shininess: 30,
     });
 
     const nodes = createNodes(scene, geometry, material);
@@ -45,8 +41,9 @@ const ThreeCanvas = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      scene.rotation.x += 0.002;
-      scene.rotation.y += 0.002;
+      updateNodeColors(nodes);
+      scene.rotation.x += 0.0005;
+      scene.rotation.y += 0.0005;
       renderer.render(scene, camera);
     };
     animate();
@@ -59,15 +56,24 @@ const ThreeCanvas = () => {
 
 function createNodes(scene, geometry, material) {
   return Array.from({ length: 300 }, () => {
-    const sphere = new THREE.Mesh(geometry, material);
+    // Clone the material and set a random color for each node
+    const randomColor = new THREE.Color(Math.random() * 0xffffff);
+    const nodeMaterial = material.clone();
+    nodeMaterial.color = randomColor;
+
+    const sphere = new THREE.Mesh(geometry, nodeMaterial);
     sphere.position.set(
       THREE.MathUtils.randFloatSpread(200),
       THREE.MathUtils.randFloatSpread(200),
       THREE.MathUtils.randFloatSpread(200)
     );
-    sphere.castShadow = true;
-    sphere.receiveShadow = true;
     scene.add(sphere);
+
+    // Store the initial random color in userData for potential future reference
+    sphere.userData = {
+      targetColor: new THREE.Color(randomColor), // Store the random color as the target color initially
+      colorChangeProgress: 0,
+    };
     return sphere;
   });
 }
@@ -75,15 +81,30 @@ function createNodes(scene, geometry, material) {
 function createConnections(nodes, scene) {
   const lineMaterial = new THREE.LineBasicMaterial({ color: 0x0f1624 });
   nodes.forEach((node) => {
-    const closeNodes = nodes.filter(
-      (n) => n !== node && node.position.distanceTo(n.position) < 35
-    );
-    closeNodes.slice(0, 5).forEach((closeNode) => {
-      const points = [node.position.clone(), closeNode.position.clone()];
-      const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
-      const line = new THREE.Line(lineGeometry, lineMaterial);
-      scene.add(line);
-    });
+    nodes
+      .filter((n) => n !== node && node.position.distanceTo(n.position) < 35)
+      .slice(0, 3)
+      .forEach((closeNode) => {
+        const points = [node.position.clone(), closeNode.position.clone()];
+        const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+        const line = new THREE.Line(lineGeometry, lineMaterial);
+        scene.add(line);
+      });
+  });
+}
+
+function updateNodeColors(nodes) {
+  nodes.forEach((node) => {
+    if (node.userData.colorChangeProgress <= 0) {
+      if (Math.random() < 0.002) {
+        // chance to initiate color change
+        node.userData.targetColor.setHex(Math.random() * 0xffffff);
+        node.userData.colorChangeProgress = 1;
+      }
+    } else {
+      node.material.color.lerp(node.userData.targetColor, 0.1);
+      node.userData.colorChangeProgress -= 0.1;
+    }
   });
 }
 
