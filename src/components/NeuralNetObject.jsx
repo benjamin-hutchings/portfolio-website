@@ -98,7 +98,7 @@ const createConnections = (nodes, scene) => {
               originalColor: new THREE.Color(0x0f1624),
               targetColor: new THREE.Color(0x0f1624),
               colorChangeProgress: 0,
-              pulseChance: 0.001 // Adjust pulse chance as needed
+              pulseChance: 0.0005 // Adjust pulse chance as needed
             };
             scene.add(line);
          });
@@ -112,7 +112,7 @@ const updateLineColors = (scene) => {
         if (Math.random() < object.userData.pulseChance) {
           // Set a new random target color
           const hsl = object.userData.originalColor.getHSL({ h: 0, s: 0, l: 0 });
-          hsl.h += (Math.random() - 0.5) * 0.1; // Small hue variation
+          hsl.h += (Math.random() - 0.5) * 0.0; // Small hue variation
           hsl.s = Math.min(hsl.s + 0.1, 0.3);  // Limited saturation
           hsl.l += (Math.random() - 0.5) * 0.1; // Small lightness variation within a safe range
           object.userData.targetColor.setHSL(hsl.h, hsl.s, hsl.l);
@@ -150,7 +150,7 @@ const animate = (scene, camera, renderer, nodes) => {
 const updateNodeColors = (nodes) => {
   nodes.forEach(node => {
     if (node.userData.colorChangeProgress <= 0) {
-      if (Math.random() < 0.002) {
+      if (Math.random() < 0.02) {
         node.userData.targetColor.setHex(Math.random() * 0xffffff);
         node.userData.colorChangeProgress = 1;
       }
