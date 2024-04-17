@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ThreeCanvas from './ThreeCanvas'; // Import the Three.js component
+import ThreeCanvas from './NeuralNetObject'; // Import the Three.js component
 
 const Hero = ({ onLearnMoreClick }) => {
   const containerVariants = {
