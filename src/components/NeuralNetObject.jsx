@@ -110,7 +110,7 @@ const createConnections = (nodes, scene) => {
               originalColor: new THREE.Color(0x0f1624),
               targetColor: new THREE.Color(0x0f1624),
               colorChangeProgress: 0,
-              pulseChance: 0.27 // Chance for a pulse to start
+              pulseChance: 0.04 // Chance for a pulse to start
             };
             scene.add(line);
          });
