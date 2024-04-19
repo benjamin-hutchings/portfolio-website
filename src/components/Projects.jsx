@@ -151,7 +151,7 @@ const Projects = () => {
       description: "Project description...",
       githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
       liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      hashtags: ["Python", "Data"]
+      hashtags: ["Python", "Data"],
     },
   ];
   return (
@@ -165,41 +165,57 @@ const Projects = () => {
             Projects
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Here are some side-projects I've worked on as part of my personal portfolio...
+            Here are some side-projects I've worked on as part of my personal
+            portfolio...
           </p>
         </div>
-  
+
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={slideUpVariant}
-          className="flex flex-wrap -m-4 justify-center"
+          className="flex flex-wrap -m-4 items-center"
         >
           {featuredProjects.map((project, index) => (
-            <div key={index} className="p-4 lg:w-1/3">
+            <div key={index} className="p-4 flex-col mx-auto sm:w-full md:w-1/2 lg:w-1/3 ">
               <motion.div
                 whileHover={hoverEffect}
-                className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center flex flex-col items-center relative"
+                className="flex flex-col justify-between bg-gray-100 bg-opacity-75 p-8 rounded-lg overflow-hidden text-center relative min-h-[450px]"
               >
-                <img src={project.imageUrl} alt="Project Thumbnail" className="max-w-full max-h-40 object-cover object-center rounded-lg mb-4" />
+                <img
+                  src={project.imageUrl}
+                  alt="Project Thumbnail"
+                  className="w-1/2 h-1/2 mx-auto object-cover object-center rounded-lg mb-4 sm:w-1/3"
+                />
                 <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                   {project.category}
                 </h2>
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   {project.title}
                 </h1>
-                <p className="leading-relaxed mb-3">{project.description}</p>
+                <p className="flex-grow">{project.description}</p>
                 <div className="flex justify-center gap-4 mb-3">
-                  <a href={project.githubUrl} className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">GitHub</a>
-                  <a href={project.liveDemoUrl} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors">Live Demo</a>
+                  <a
+                    href={project.githubUrl}
+                    className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={project.liveDemoUrl}
+                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors"
+                  >
+                    Live Demo
+                  </a>
                 </div>
-                <p className="text-xs font-semibold text-indigo-500">#{project.hashtags.join(' #')}</p>
+                <p className="text-xs font-semibold text-indigo-500">
+                  #{project.hashtags.join(" #")}
+                </p>
               </motion.div>
             </div>
           ))}
         </motion.div>
-  
         <div className="flex overflow-x-scroll py-10 gap-4">
           {additionalProjects.map((project, index) => (
             <motion.div
@@ -217,14 +233,26 @@ const Projects = () => {
                 {project.title}
               </h1>
               <div className="flex justify-center gap-4 mb-3">
-                <a href={project.githubUrl} className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">GitHub</a>
-                <a href={project.liveDemoUrl} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors">Live Demo</a>
+                <a
+                  href={project.githubUrl}
+                  className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={project.liveDemoUrl}
+                  className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors"
+                >
+                  Live Demo
+                </a>
               </div>
-              <p className="text-xs font-semibold text-indigo-500 text-right">#{project.hashtags.join(' #')}</p>
+              <p className="text-xs font-semibold text-indigo-500 text-right">
+                #{project.hashtags.join(" #")}
+              </p>
             </motion.div>
           ))}
         </div>
-  
+
         <div className="w-full flex justify-center mt-10 mb-20">
           <motion.a
             href="#contact"
