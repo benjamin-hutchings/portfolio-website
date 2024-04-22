@@ -113,10 +113,10 @@ const Experience = () => {
             <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
               Experience
             </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 text-right">
-                Chronological timeline of my professional journey and
-                significant achievements.
-              </p>
+            <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 text-right">
+              Chronological timeline of my professional journey and significant
+              achievements.
+            </p>
           </div>
           <motion.div
             ref={ref} // Attach the ref to the motion.div
@@ -189,18 +189,37 @@ const Experience = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="travel-info absolute bg-white shadow-lg p-3 mt-2 rounded z-50 max-w-96"
+              className="travel-info absolute text-sm bg-white shadow-lg p-3 mt-2 rounded z-50 max-w-96"
             >
-              <p className="text-gray-800 text-sm ">
-                After graduating, I embraced the opportunity to broaden my
-                horizons through a year of global travel and diverse work
-                experiences. I volunteered on a sheep farm in Iceland, was front
-                of house hospitality services in the French Alps, explored the
-                Philippines through hitchhiking, and "brought the vibe" as a
-                surf camp host in Bali. These experiences enhanced my
-                adaptability, cultural awareness, and ability to thrive in
-                varied and challenging environments, skills I am eager to
-                leverage in my professional career.
+              <p>
+                After graduating, I embraced a year of global travel and diverse
+                work experiences. Highlights included: <br />
+                <br />
+              </p>
+              <ul className="text-gray-800 list-disc pl-5">
+                <li>
+                  Volunteering on a sheep farm in <strong>Iceland</strong>. 🐑
+                </li>
+                <li>
+                  Working a ski season in hospitality in the{" "}
+                  <strong>French Alps</strong>. ⛷️
+                </li>
+                <li>
+                  Hitchhiking through the mountains and island hopping the
+                  <strong> Philippines</strong> . 🏝️
+                </li>
+                <li>
+                  Living in a surf camp in Bali, <strong>Indonesia</strong> as a
+                  social host. 🏄
+                </li>
+              </ul>
+              <p>
+                <br />
+                These experiences improved my adaptability, broadened my
+                understanding of different cultures, and gave me experience
+                interacting with a broad range of people in both client facing
+                roles, and social contexts — skills that I am keen to build upon
+                during my professional career.
               </p>
             </div>
           )}

@@ -2,7 +2,6 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ReactTyped } from "react-typed";
-import { BiItalic } from "react-icons/bi";
 
 const About = () => {
   const controls = useAnimation();
