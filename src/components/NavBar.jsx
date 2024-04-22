@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className="bg-gray-800 text-white p-4 h-16 flex items-center justify-between z-50 fixed top-0 w-full shadow-md">
       <div className="text-lg font-semibold">
         <a href="/" className="hover:text-gray-300">
-          Benjamin Hutchings
+          Benjamin Hutchings | Portfolio
         </a>
       </div>
 
