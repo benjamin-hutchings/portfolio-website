@@ -3,17 +3,17 @@ import React, { useState } from "react";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-gray-800 text-white p-4 h-16 flex items-center justify-between flex-wrap relative">
+    <nav className="bg-gray-800 text-white p-4 h-16 flex items-center justify-between z-50 fixed top-0 w-full shadow-md">
       <div className="text-lg font-semibold">
         <a href="/" className="hover:text-gray-300">
-          My Portfolio
+          Benjamin Hutchings
         </a>
       </div>
 
       {/* Hamburger Icon */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white inline-flex p-3 hover:bg-gray-700 rounded lg:hidden ml-auto hover:text-white outline-none"
+        className="text-white inline-flex p-3 hover:bg-gray-700 rounded lg:hidden ml-auto hover:text-white outline-none top-0 z-50"
       >
         <svg
           className="w-6 h-6"
@@ -70,7 +70,7 @@ const NavBar = () => {
       </div>
 
       {/* For larger screens, keep the existing layout */}
-      <div className="hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+      <div className="hidden flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
         <ul className="lg:flex-grow lg:flex lg:justify-end mt-2 lg:mt-0 space-x-4">
           <li>
             <a href="#about" className="hover:text-gray-300">
