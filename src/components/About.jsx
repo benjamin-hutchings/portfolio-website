@@ -2,6 +2,7 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ReactTyped } from "react-typed";
+import { BiItalic } from "react-icons/bi";
 
 const About = () => {
   const controls = useAnimation();
@@ -40,7 +41,7 @@ const About = () => {
       ref={ref}
     >
       <motion.div
-        className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center justify-between"
+        className="container mx-auto flex px-20 py-10 md:flex-row flex-col items-center justify-between"
         initial="hidden"
         animate={controls}
         variants={variants}
@@ -48,7 +49,7 @@ const About = () => {
         <motion.img
           src={`${process.env.PUBLIC_URL}/img/profile-pic.png`}
           alt="Profile Picture"
-          className="mb-10 md:mb-0 w-48 h-48 rounded-full mx-auto md:mx-0 object-cover"
+          className="mb-10 object-center md:mb-0 w-48 h-48 rounded-full mx-auto md:mx-0 object-cover"
           variants={variants}
         />
         <motion.div className="md:ml-24 text-center">
@@ -58,13 +59,11 @@ const About = () => {
             <ReactTyped strings={jobRoles} typeSpeed={40} backSpeed={20} loop />
           </h1>
           <p className="mb-8 leading-relaxed">
-            Driven by a passion for innovation, with a solid engineering
-            background, I leverage the power of{" "}
-            <strong>Machine Learning</strong> to develop advanced AI models,
-            specializing in deep learning algorithms. My mission is to conduct
-            groundbreaking AI research and translate these findings into
-            practical, industry-leading solutions that transform technology and
-            enhance lives.
+            I am a <strong>Machine Learning Engineer</strong> with a strong
+            engineering background. <br />
+            My mission is to be at the forefront of AI, implementing cutting
+            edge deep learning algorithms to revolutionise technology and
+            enhance lives. View my portfolio, then contact me below.
           </p>
           <motion.div
             className="flex justify-center md:justify-center gap-4"
