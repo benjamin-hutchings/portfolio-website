@@ -27,7 +27,6 @@ const About = () => {
   const jobRoles = [
     "Machine Learning Engineer",
     "Deep Learning Researcher",
-    "AI Enthusiast",
     "Skier",
     "Surfer",
     "Crossfitter",
@@ -52,11 +51,12 @@ const About = () => {
           variants={variants}
         />
         <motion.div className="md:ml-24 text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          <h1 className="title-font mb-4 font-medium text-gray-900 text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl">
             Hi, I'm Ben... <br />
             {/* Typed component for job roles animation */}
             <ReactTyped strings={jobRoles} typeSpeed={40} backSpeed={20} loop />
           </h1>
+
           <p className="mb-8 leading-relaxed">
             I am a <strong>Machine Learning Engineer</strong> with a strong
             engineering background. <br />
