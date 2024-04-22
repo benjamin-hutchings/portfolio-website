@@ -78,7 +78,7 @@ const Skills = () => {
         { name: "Validation", icon: "✅" },
         { name: "Peer Review", icon: "👀" },
         { name: "Stakeholder Engagement", icon: "🤝" },
-        { name: "Lab-based Experimentation", icon: "🔬" },
+        { name: "Lab-Based Experimentation", icon: "🔬" },
       ],
       color: "bg-purple-500",
       subSkillColor: "bg-purple-200",
@@ -152,8 +152,8 @@ const Skills = () => {
             Skills & Expertise
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Leveraging a blend of technical skills and creativity to solve
-            complex challenges and innovate.
+            I can leveraging a blend of technical skills and creativity to solve
+            complex challenges.
           </p>
         </div>
         <motion.div className="flex flex-wrap justify-center">
