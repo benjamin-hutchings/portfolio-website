@@ -18,7 +18,7 @@ const Projects = () => {
   }, [controls, inView]);
 
   const slideUpVariant = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1.5 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
     hidden: { opacity: 0, y: 50 },
   };
 
@@ -26,7 +26,7 @@ const Projects = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1.5, delay: 0.5 },
+      transition: { duration: 1.5, delay: 0.2 },
     },
     hidden: { opacity: 0, scale: 1 },
   };
