@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
-  const [company, setCompany] = useState(""); // New state for company
+  const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (event) => {
