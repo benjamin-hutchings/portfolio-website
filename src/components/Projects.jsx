@@ -53,13 +53,13 @@ const Projects = () => {
 
   const featuredProjects = [
     {
-      category: "Web Development",
-      title: "Project 1",
-      description: "A brief description of the project...",
+      category: "Deep Learning Frameworks",
+      title: "Pytorch vs Tensorflow vs Keras",
+      description: "The same feedforward network trained to classify handwriting samples in the MINST dataset built using Pytorch, Keras & Tensorflow - hosted in a Streamlit App.",
       imageUrl: "/img/github-logo.png",
-      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      hashtags: ["React", "API"],
+      githubUrl: "https://github.com/benjamin-hutchings/comparrison-pytorch-tensorflow-keras",
+      liveDemoUrl: "https://comparrison-pytorch-tensorflow-keras-h55gybhkzcdxtfghiqnf9u.streamlit.app/",
+      hashtags: ["PyTorch", "Tensorflow", "Keras"],
     },
     {
       category: "Machine Learning",
@@ -199,12 +199,16 @@ const Projects = () => {
                   <a
                     href={project.githubUrl}
                     className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     GitHub
                   </a>
                   <a
                     href={project.liveDemoUrl}
                     className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     Live Demo
                   </a>
@@ -236,12 +240,16 @@ const Projects = () => {
                 <a
                   href={project.githubUrl}
                   className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   GitHub
                 </a>
                 <a
                   href={project.liveDemoUrl}
                   className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400 transition-colors"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Live Demo
                 </a>
