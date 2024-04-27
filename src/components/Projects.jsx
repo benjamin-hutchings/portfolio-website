@@ -56,10 +56,10 @@ const Projects = () => {
       category: "Deep Learning Frameworks",
       title: "Pytorch vs Tensorflow vs Keras",
       description: "The same feedforward network trained to classify handwriting samples in the MINST dataset built using Pytorch, Keras & Tensorflow - hosted in a Streamlit App.",
-      imageUrl: "/img/github-logo.png",
+      imageUrl: "img/project_1_img.webp",
       githubUrl: "https://github.com/benjamin-hutchings/comparrison-pytorch-tensorflow-keras",
       liveDemoUrl: "https://comparrison-pytorch-tensorflow-keras-h55gybhkzcdxtfghiqnf9u.streamlit.app/",
-      hashtags: ["PyTorch", "Tensorflow", "Keras"],
+      hashtags: ["PyTorch", "Tensorflow", "Keras", "Streamlit"],
     },
     {
       category: "Machine Learning",
@@ -181,7 +181,7 @@ const Projects = () => {
             <div key={index} className="p-4 flex-col mx-auto sm:w-full md:w-1/2 lg:w-1/3 ">
               <motion.div
                 whileHover={hoverEffect}
-                className="flex flex-col justify-between bg-gray-100 bg-opacity-75 p-8 rounded-lg overflow-hidden text-center relative min-h-[450px]"
+                className="flex flex-col justify-between bg-gray-100 bg-opacity-75 p-8 rounded-lg overflow-hidden text-center relative min-h-[500px]"
               >
                 <img
                   src={project.imageUrl}
