@@ -55,10 +55,10 @@ const Projects = () => {
     {
       category: "Deep Learning Frameworks",
       title: "Pytorch vs Tensorflow vs Keras",
-      description: "The same feedforward network trained to classify handwriting samples in the MINST dataset built using Pytorch, Keras & Tensorflow with analysis in a Streamlit App.",
+      description: "End-to-end deployment of the same feedforward network trained to classify handwriting samples in the MINST dataset built using Pytorch, Keras & Tensorflow with analysis in an interactive Streamlit App.",
       imageUrl: "img/project_1_img.webp",
       githubUrl: "https://github.com/benjamin-hutchings/comparrison-pytorch-tensorflow-keras",
-      liveDemoUrl: "https://comparrison-pytorch-tensorflow-keras-kfvns3i3ex4rdxbtcjpwk4.streamlit.app/",
+      liveDemoUrl: "https://comparrison-pytorch-tensorflow-keras-kfvns3i3ex4rdxbtcjpwk4.streamlit.app",
       hashtags: ["PyTorch", "Tensorflow", "Keras", "Streamlit"],
     },
     {
