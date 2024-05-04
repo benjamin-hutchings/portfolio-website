@@ -72,12 +72,12 @@ const Projects = () => {
     },
     {
       category: "Mobile App",
-      title: "Project 3",
-      description: "An innovative mobile application...",
-      imageUrl: "/img/github-logo.png",
-      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      hashtags: ["Flutter", "Firebase"],
+      title: "ML Revision Card Application",
+      description: "A full-stack ML revision card application with CRUD functionality. React and Tailwind frontend, supported by a custom Nodejs API and SQLite3 database.",
+      imageUrl: "/img/project-2-img.webp",
+      githubUrl: "https://github.com/benjamin-hutchings/ml-revision-app-fullstack",
+      liveDemoUrl: "https://github.com/benjamin-hutchings/ml-revision-app-fullstack",
+      hashtags: ["React", "TailwindCSS", "Nodejs", "SQLite3"],
     },
   ];
   const additionalProjects = [
