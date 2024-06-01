@@ -40,12 +40,12 @@ const Skills = () => {
         "Designing and implementing neural network architectures for complex problem solving.",
       icon: "🧠",
       subSkills: [
-        { name: "Keras", icon: "🔧" },
         { name: "PyTorch", icon: "🔥" },
         { name: "Tensorflow", icon: "💡" },
+        { name: "Reinforcement Learning", icon: "🕹️" },
         { name: "Computer Vision", icon: "👁️" },
         { name: "NLP", icon: "💬" },
-        { name: "Reinforcement Learning", icon: "🕹️" },
+        { name: "Keras", icon: "🔧" }
       ],
       color: "bg-red-500",
       subSkillColor: "bg-red-200",
@@ -57,13 +57,13 @@ const Skills = () => {
       icon: "💻",
       subSkills: [
         { name: "Python", icon: "🐍" },
+        { name: "Git", icon: "🌐" },
         { name: "JavaScript", icon: "📜" },
         { name: "React", icon: "⚛️" },
         { name: "TailwindCSS", icon: "🌬️" },
-        { name: "Git", icon: "🌐" },
-        { name: "Agile", icon: "🏃‍♂️" },
+        { name: "Cloud Computing", icon: "☁️" },
         { name: "Node.js", "icon": "🛠️" },
-        { name: "Three.js", icon: "🌿" },
+        { name: "Agile", icon: "🏃‍♂️" }
       ],
       color: "bg-green-500",
       subSkillColor: "bg-green-200",
@@ -153,8 +153,7 @@ const Skills = () => {
             Skills & Expertise
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            I can leveraging a blend of technical skills and creativity to solve
-            complex challenges.
+            I having a range of technical skills to draw from. These allow me to creatively and confidently approach and communicate technical challenges and ideas.
           </p>
         </div>
         <motion.div className="flex flex-wrap justify-center">

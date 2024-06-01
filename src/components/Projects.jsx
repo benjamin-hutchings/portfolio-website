@@ -82,12 +82,12 @@ const Projects = () => {
   ];
   const additionalProjects = [
     {
-      title: "Project 4",
-      category: "Category",
-      description: "Project description...",
-      githubUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      liveDemoUrl: "https://elegant-pasca-f13e12.netlify.app/",
-      hashtags: ["CSS", "HTML"],
+      title: "LeetCode Submissions",
+      category: "Algorithms and Data Structures",
+      description: "A collection of solutions to algorithm and data structure problems on LeetCode.",
+      githubUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
+      liveDemoUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
+      hashtags: ["Python", "Algorithms", "Data Structures", "LeetCode"],
     },
     {
       title: "Project 5",
