@@ -105,7 +105,7 @@ const Projects = () => {
     {
       title: "LeetCode Submissions",
       category: "Algorithms and Data Structures",
-      description: "A collection of my solutions for algorithm and data structure problems on LeetCode with implementations in Python.",
+      description: "A collection of my solutions for algorithm and data structure problems on LeetCode implemented in Python.",
       imageUrl: "img/project_img_leetcode.webp",
       githubUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
       liveDemoUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
