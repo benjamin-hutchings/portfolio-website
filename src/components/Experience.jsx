@@ -15,24 +15,24 @@ const experiences = [
     icon: "FaRobot",
   },
   {
-    id: 2,
-    title: "Engineering Summer Internship",
-    company: "Defence Science & Technology Laboratory (DSTL)",
-    duration: "June - Aug 2018, 2019, 2020",
-    description:
-      "12 week engineering research summer placements undertaken as part of sponsorship by DSTL through the Defence Technical Undergraduate Scheme (DTUS). Focused on communications and wireless technologies, provided initial exposure to AI.",
-    side: "left",
-    icon: "FaLaptopCode",
-  },
-  {
     id: 3,
     title: "M.Eng. Mechanical Engineering",
     company: "University of Birmingham, UK",
     duration: "Sept 2017 - Jul 2021",
     description:
       "Graduated with a 1st Class Undergraduate Masters with Honours in Mechanical Engineering (MEng). Received an academic scholarship from the School of Engineering and sponsorship by the prestigious Defence Technical Undergraduate Scheme (DTUS). ",
-    side: "right",
+    side: "left",
     icon: "FaGraduationCap",
+  },
+  {
+    id: 2,
+    title: "Engineering Summer Internship",
+    company: "Defence Science & Technology Laboratory (DSTL)",
+    duration: "June - Aug 2018, 2019, 2020",
+    description:
+      "12 week engineering research summer placements undertaken as part of sponsorship by DSTL through the Defence Technical Undergraduate Scheme (DTUS). Focused on communications and wireless technologies, provided initial exposure to AI.",
+    side: "right",
+    icon: "FaLaptopCode",
   },
   {
     id: 4,
