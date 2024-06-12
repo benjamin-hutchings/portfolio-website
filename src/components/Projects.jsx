@@ -89,7 +89,7 @@ const Projects = () => {
       imageUrl: "img/project_2_img.webp",
       githubUrl: "https://github.com/benjamin-hutchings/Neural-Net-Using-NumPy",
       liveDemoUrl: "https://colab.research.google.com/drive/1Biiwy6HHk1jdfxcWuIEVM3tfTHmqJCur?usp=sharing",
-      hashtags: ["Python", "Numpy", "Deep Learning", "JupyterNotebook", "GoogleColab"],
+      hashtags: ["Python", "Numpy", "Jupyter"],
     },
     {
       category: "Full Stack Application",
@@ -109,7 +109,7 @@ const Projects = () => {
       imageUrl: "img/project_img_leetcode.webp",
       githubUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
       liveDemoUrl: "https://github.com/benjamin-hutchings/LeetCode-Submissions",
-      hashtags: ["Python", "LeetCode"],
+      hashtags: ["Python", "LeetCode", "Algorithms"],
     },
     {
       title: "This Website!",
@@ -121,13 +121,13 @@ const Projects = () => {
       hashtags: ["React", "TailwindCSS", "JavaScript", "ThreeJS"],
     },
     {
-      title: "Project 6",
-      category: "Category",
-      description: "Project description...",
-      imageUrl: "img/github-logo.png",
-      githubUrl: "https://github.com/benjamin-hutchings/project-6",
-      liveDemoUrl: "https://github.com/benjamin-hutchings/project-6",
-      hashtags: ["Hashtag1", "Hashtag2"],
+      title: "Play Hexapawn!",
+      category: "Deep Reinforcement Learning Agent",
+      description: "End-to-end training and deployment of a DQN Agent. Backend in Python, UI in JavaScript, connected via Flask, deployed on the Cloud via Docker, and hosted using Heroku.",
+      imageUrl: "img/project_img_hexapawn.webp",
+      githubUrl: "https://github.com/benjamin-hutchings/DQN-RLAgent-Hexapawn",
+      liveDemoUrl: "https://play-hexapawn-app-d82c6332d05f.herokuapp.com/",
+      hashtags: ["TensorFlow", "Flask", "Docker"],
     },
     {
       title: "Project 7",
